@@ -1,20 +1,20 @@
 const projects = [
     {
         title: "Design and Development of Comprehensive Security Testing – Automated Penetration Testing Desktop Application (Top 5 Finalist out of 250 ECSE Capstone Students)",
-        description: "Designed and developed a full-stack security testing application that performs automated vulnerability analysis and reports results in real time within 60 seconds. Integrated AES-256–encrypted MongoDB storage and real-time Socket.IO messaging to support secure data management and live vulnerability feedback. Configured Kali Linux OS drivers and dependencies to develop and test scripts that check for SQL Injection and Cross-Site Scripting. Automated penetration testing workflows in a Kali Linux environment, improving testing coverage and execution speed by 80% through scripting and orchestration.",
-        stack: [" Kali Linux", "Python", "Flask", "Electron.js", "MongoDB Atlas", "Socket.IO", "Docker", "Playwright", "SQLMap", "XSSer"],
+        description: "Automated the most tedious parts of security testing and built a desktop app that scans for SQL injection and XSS vulnerabilities and delivers a full report in under 60 seconds.",
+        stack: ["Kali Linux", "Python", "Flask", "Electron.js", "MongoDB Atlas", "Socket.IO", "Docker", "Playwright", "SQLMap", "XSSer"],
         github: "github"
     },
     {
         title: "Tesla Stock Trading Simulation – AI/Machine Learning Model",
-        description: "capstone project",
-        stack: ["python","kali","flask","mongodb"],
+        description: "Trained an XGBoost model to predict stock movements and built decision logic around it — achieving 95% accuracy and turning a $10K simulated portfolio into a working trading strategy.",
+        stack: ["Python","XGBoost","scikit-learn","Pandas", "NumPy","yFinance API", "Joblib", "Google Colab"],
         github: "github"
     },
     {
-        title: "Capstone",
-        description: "capstone project",
-        stack: ["python","kali","flask","mongodb"],
+        title: "Food Delivery Application",
+        description: "A fully functional Android food delivery app built from scratch — live map tracking, dynamic menus, cart, reviews, and authentication, all in Java",
+        stack: ["Java","Android Studio","SQLite","Google Maps SDK", "XML"],
         github: "github"
     }
 ]
