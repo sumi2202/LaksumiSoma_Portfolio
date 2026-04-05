@@ -1,6 +1,6 @@
 const projects = [
     {
-        title: "Design and Development of Comprehensive Security Testing – Automated Penetration Testing Desktop Application (Top 5 Finalist out of 250 ECSE Capstone Students)",
+        title: "Automated Penetration Testing Desktop Application (Top 5 Finalist out of 250 ECSE Capstone Students)",
         description: "Automated the most tedious parts of security testing and built a desktop app that scans for SQL injection and XSS vulnerabilities and delivers a full report in under 60 seconds.",
         stack: ["Kali Linux", "Python", "Flask", "Electron.js", "MongoDB Atlas", "Socket.IO", "Docker", "Playwright", "SQLMap", "XSSer"],
         github: "github"

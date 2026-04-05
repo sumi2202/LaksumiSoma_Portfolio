@@ -16,7 +16,7 @@ html {
 .header-background {
   position: absolute;
   width: 100vw;
-  height: 20vh;
+  height: 40vh;
   top: 0;
   left: 0;
   background: #12263aff;
@@ -25,6 +25,7 @@ html {
 
 #header {
   position: relative;
+  height: 40vh;
   overflow: hidden;
 }
 
@@ -124,21 +125,25 @@ html {
 #project-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   gap: 20px;
   text-align: justify;
   padding: 3px;
   margin: 40px;
 }
 .project-card{
-  height: 100%;
   padding: 20px;
-  margin: 10px;
   gap: 20px;
   background: linear-gradient(135deg, #856084ff, #12263aff);
   backdrop-filter: blur(15px);
   border-style: solid;
   border-radius: 10px;
   border-color: #f5d5edff;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: white;
+  box-shadow: 0 8px 20px rgba(245, 213, 237, 0.3);
 }
 
 #skills-container {
@@ -159,6 +164,11 @@ html {
   border-radius: 10px;
   border-color: #c2efebff;
   color: white;
+}
+.skills-card:hover {
+  transform: translateY(-5px);
+  border-color: white;
+  box-shadow: 0 8px 20px rgba(245, 213, 237, 0.3);
 }
 
 .stack{
