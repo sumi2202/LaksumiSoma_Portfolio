@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +40,22 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.project-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+}
+
+.project-images {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+
+.project-images img {
+  height: 160px;
+  border-radius: 8px;
 }
