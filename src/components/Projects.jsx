@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-// Pull the file ID out of a Google Drive share link
 function getDriveId(url) {
   const m =
     url.match(/drive\.google\.com\/file\/d\/([\w-]+)/) ||
@@ -8,7 +7,6 @@ function getDriveId(url) {
   return m ? m[1] : null;
 }
 
-// Drive image links become a direct image URL; other URLs pass through
 function imageSrc(url) {
   const id = getDriveId(url);
   return id ? `https://lh3.googleusercontent.com/d/${id}` : url;
@@ -67,32 +65,38 @@ function Projects() {
       <h2>My Projects</h2>
       <div id="project-container">
         {projects.map((project) => (
-          <div key={project._id} className="project-card">
-            <h3>{project.title}</h3>
-
+          <article key={project._id} className="project-card">
             {project.video && <VideoPlayer src={project.video} />}
 
             {project.images?.length > 0 && (
               <div className="project-images">
                 {project.images.map((img) => (
-                  <img
-                    key={img}
-                    src={imageSrc(img)}
-                    alt={project.title}
-                    loading="lazy"
-                  />
+                  <img key={img} src={imageSrc(img)} alt={project.title} loading="lazy" />
                 ))}
               </div>
             )}
 
-            <p>{project.description}</p>
-            <div className="stack">
-              {project.stack.map((tech) => (
-                <span key={tech}>{tech}</span>
-              ))}
+            <div className="project-body">
+              {project.badge && <span className="project-badge">★ {project.badge}</span>}
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+
+              <div className="stack">
+                {project.stack.map((tech) => (
+                  <span key={tech}>{tech}</span>
+                ))}
+              </div>
+
+              <a
+                className="project-link"
+                href={project.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                View on GitHub →
+              </a>
             </div>
-            <a href={project.github}>GitHub →</a>
-          </div>
+          </article>
         ))}
       </div>
     </section>
