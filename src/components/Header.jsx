@@ -1,17 +1,25 @@
+import profilePic from "../assets/profile_pic.png";
+
 function Header() {
-    return(
-        <><div id="header">
-            <h1>Hi, I'm Laksumi</h1>
-            <p>Looking for valuable learning opportunites and meaningful connections</p>
-        </div><div class="header-background">
-                <span class="ball"></span>
-                <span class="ball"></span>
-                <span class="ball"></span>
-                <span class="ball"></span>
-                <span class="ball"></span>
-                <span class="ball"></span>
-            </div></>
-    );
+  return (
+    <div id="header">
+      <div className="header-background">
+        <span className="ball"></span>
+        <span className="ball"></span>
+        <span className="ball"></span>
+        <span className="ball"></span>
+        <span className="ball"></span>
+        <span className="ball"></span>
+        <span className="ball"></span>
+        <span className="ball"></span>
+      </div>
+
+      <img className="profile-pic" src={profilePic} alt="Profile Picture" />
+      <h1 className="fx-typewriter" style={{ "--chars": 12 }}>LAKSUMI SOMA</h1>
+      <h3>Software Engineer</h3>
+      <p>Engineer by training, creative by nature. I build software that works and feels good to use.</p>
+    </div>
+  );
 }
 
 export default Header;

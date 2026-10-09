@@ -1,10 +1,18 @@
 body {
   background-color: #12263aff;
   color: #f5d5edff;
-  font-family: "Red Hat Mono", sans-serif;
+  font-family: "Red Hat Mono", monospace;
 }
 html {
   scroll-behavior: smooth;
+}
+
+/* --ink    main text colour (defaults to currentColor)
+   --ink-2  primary accent   --ink-3  secondary accent */
+:root {
+  --ink: currentColor;
+  --ink-2: #ff4fd8;
+  --ink-3: #4ff8ff;
 }
 
 /* ---------- Header / floating balls ---------- */
@@ -14,25 +22,36 @@ html {
   }
 }
 
-.header-background {
-  position: absolute;
-  width: 100vw;
-  height: 40vh;
-  top: 0;
-  left: 0;
-  background: #12263aff;
-  overflow: hidden;
-}
-
 #header {
   position: relative;
-  height: 40vh;
+  min-height: 40vh;
+  padding: 24px 0;
   overflow: hidden;
 }
 
-#header h1, #header p {
+.header-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#header h1,
+#header h3,
+#header p,
+.profile-pic {
   position: relative;
   z-index: 1;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  border: 5px solid #f5d5edff;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .ball {
@@ -117,13 +136,34 @@ html {
   box-shadow: 40vmin 0 5.196265905749415vmin currentColor;
 }
 
-/* ---------- About ---------- */
-#about-container {
-  text-align: justify;
-  padding: 3px;
-  margin: 40px;
+/* ---------- Typewriter ---------- */
+.fx-typewriter {
+  --chars: 12; /* fallback, overridden by the inline style */
+  display: block;
+  box-sizing: content-box;
+  width: calc(var(--chars) * 1ch);
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Red Hat Mono", monospace;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 8vw, 3.5rem); /* change this to resize */
+  line-height: 1.2;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.55ch solid var(--ink-2);
+  animation: fx-type 3.6s steps(var(--chars)) infinite,
+             fx-caret 0.65s steps(1) infinite;
 }
 
+@keyframes fx-type {
+  0%, 8%    { width: 0; }
+  55%, 100% { width: calc(var(--chars) * 1ch); }
+}
+
+@keyframes fx-caret {
+  50% { border-color: transparent; }
+}
 /* ---------- Grids ---------- */
 #project-container,
 #skills-container {
@@ -207,6 +247,7 @@ html {
 
 .project-images img {
   height: 150px;
+  width: auto;
   border-radius: 10px;
   border: 1px solid rgba(245, 213, 237, 0.15);
 }
