@@ -1,12 +1,12 @@
 const education = [
   {
     school: "Seneca Polytechnic",
-    degree: "Ontario Postgraduate Certificate, <strong>Artificial Intelligence</strong>",
+    degree: "Ontario Graduate Certificate --- Artificial Intelligence",
     dates: "2026 - 2027",
   },
   {
     school: "Ontario Tech University",
-    degree: "Bachelor of Engineering, <strong>Software Engineering</strong>",
+    degree: "Bachelor of Engineering --- Software Engineering",
     dates: "2020 - 2025",
   }
 ];
